@@ -6,8 +6,17 @@
 
 # 1. Load libraries
 library(readr)
+library(tidyverse)
 
 
 # 2. Load the BMW dataset
 bmw <- read_csv("BMW sales data (2010-2024) (1).csv")
+
+
+
+
+
+#data cleaning
+#check any NA in the data set and display the count 
+nrow(is.na(bmw_sales))
 
