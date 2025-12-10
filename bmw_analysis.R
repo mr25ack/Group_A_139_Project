@@ -11,6 +11,19 @@ library(tidyverse)
 # 2. Load the BMW dataset
 BMW_sales <- read_csv("BMW sales data (2010-2024) (1).csv")
 
+# 3. understand dataset
+View(BMW_sales_data_2010_2024_1_)
+print(colnames(BMW_sales_data_2010_2024_1_))
+nrow(BMW_sales_data_2010_2024_1_)
+print(head(BMW_sales_data_2010_2024_1_))
+library(tibble)
+print(glimpse(BMW_sales_data_2010_2024_1_))
+summary(BMW_sales_data_2010_2024_1_$Engine_Size_L)
+summary(BMW_sales_data_2010_2024_1_$Mileage_KM)
+summary(BMW_sales_data_2010_2024_1_$Price_USD)
+summary(BMW_sales_data_2010_2024_1_$Sales_Volume)
+
+
 
 
 #data cleaning
