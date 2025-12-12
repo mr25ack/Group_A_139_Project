@@ -57,9 +57,18 @@ barplot(percentages,
         main = "Stacked Bar Of BMW car models: Asia vs Africa",
         ylim = c(0, 100),
         legend.text = c("Asia", "Africa"),
-        args.legend = list(x = "topright"), las = 2, cex.names = 0.8, mgp = c(4, 1, 0))  
+        args.legend = list(x = "topright"), las = 2, cex.names = 0.8, mgp = c(4, 1, 0)) 
+
+#for best visualisation
+tpercentages<-prop.table(t(pt), margin=2) * 100
+barplot(tpercentages, col = c("red", "green", "yellow", "pink", "blue","orange","purple","lightblue","darkgreen","gray","black"),
+        xlab= "Model", ylab = "Percentage", 
+        main = "Stacked Bar Of BMW car models by Asia vs Africa", ylim = c(0, 100), 
+        legend.text = rownames(tpercentages), args.legend = list(x = "topright"))
+
 # closes the png file 
 dev.off()
+
 
 
 
